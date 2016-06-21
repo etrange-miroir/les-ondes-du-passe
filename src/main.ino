@@ -34,7 +34,7 @@ void loop () {
 		// stop the sound
 		mp3_stop();
 		// turn off motor by deactivating the relay
-		digitalWrite(relay, HIGH);
+		digitalWrite(relay, LOW);
 	}
 	// keep off bouncing
 	delay(100);
