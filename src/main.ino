@@ -8,6 +8,8 @@ SoftwareSerial mySerial(10, 11);
 Button play = Button(2, INPUT_PULLUP);
 // stop reed sensor
 Button stop = Button(3, INPUT_PULLUP);
+// busy pin to check wether the mp3 player is busy (i.e. playing) or not
+int busy = 8;
 // relay pin
 int relay = 4;
 
@@ -24,6 +26,9 @@ void setup () {
 }
 
 void loop () {
+	// check is the sound has ended, if so turn off the relay
+	bool isBusy = digitalRead(busy);
+	if (isBusy == HIGH) digitalWrite(relay, LOW);
 	if (play.uniquePress()) {
 		// play the sound
 		mp3_play(1);
