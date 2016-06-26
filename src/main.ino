@@ -3,7 +3,7 @@
 #include <Button.h>
 
 // Rx, Tx to the mp3 player
-SoftwareSerial mySerial(10, 11);
+SoftwareSerial mySerial(11, 12);
 // play reed sensor
 Button play = Button(2, INPUT_PULLUP);
 // stop reed sensor
@@ -11,7 +11,7 @@ Button stop = Button(3, INPUT_PULLUP);
 // busy pin to check wether the mp3 player is busy (i.e. playing) or not
 int busy = 8;
 // relay pin
-int relay = 4;
+int relay = 13;
 
 void setup () {
 	Serial.begin(9600);

@@ -17,7 +17,7 @@ git clone https://github.com/etrange-miroir/les-ondes-du-passe
 ### Upload code to microcontroler
 
 ```
-platformio run -t upload
+platformio run -t upload -e nano
 ```
 
 ### Where to store mp3
