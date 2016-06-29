@@ -22,6 +22,6 @@ platformio run -t upload -e nano
 
 ### Where to store mp3
 
-In the mp3 folder which is at the root of the µSD card.
+Create a folder named `01`
 
-Name the sound ```0001.mp3```.
+In it, put the sound with the following name `001.mp3`.
